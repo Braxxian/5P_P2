@@ -15,10 +15,11 @@
 .golden-text{
     font-family: 'MotionPicture', Georgia, 'Times New Roman', Times, serif;
     font-size: 8rem;
-    color: darkgoldenrod;
+    color:gold;
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
 .card-wrapper{
     display: flex;
@@ -29,4 +30,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.enter{
+    font-family: 'MotionPicture',Georgia, 'Times New Roman', Times, serif;
+    font-size: 12rem;
+    color: gold;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+}
+.enter:hover{
+    color: rgb(228, 213, 128);
+}
+.enter:active{
+    transform: scale(0.98);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    transform: translateY(4px);
+}
+a{
+    text-decoration: none;
 }
