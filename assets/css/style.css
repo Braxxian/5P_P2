@@ -28,6 +28,7 @@
 }
 .card-size{
     width: 8rem;
+    box-shadow: 2px 2px 2px #333333;
 }
 .enter-play-wrapper{
     display: flex;
@@ -63,3 +64,27 @@
 a{
     text-decoration: none;
 }
+
+
+
+
+
+/* sizing for tablets / laptops */
+@media screen and (min-width:768px){
+    .card-size{
+        width:12rem;
+        box-shadow: 2px 2px 2px #333333;
+    }
+    
+}
+/* sizing for desltop */
+@media screen and (min-width:1080px){
+    .card-size{
+        width:16rem;
+        box-shadow: 2px 2px 2px #333333;
+    }
+    
+}
+
+
+
