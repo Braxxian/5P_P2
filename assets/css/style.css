@@ -1,70 +1,87 @@
-*{
+/* general styles */
+
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     background: url("../images/green-game-table.jpg") no-repeat center center /cover;
     height: 100vh;
     font-size: 62.5%;
 }
+
 @font-face {
     font-family: 'MotionPicture';
     src: url(../fonts/MotionPicture.ttf);
 }
-.golden-text{
+
+/* Hero page styles */
+.golden-text {
     font-family: 'MotionPicture', Georgia, 'Times New Roman', Times, serif;
     font-size: 8rem;
-    color:gold;
+    color: gold;
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
-.card-wrapper{
+
+.card-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.card-size{
+
+.card-size {
     width: 8rem;
     box-shadow: 2px 2px 2px #333333;
 }
-.enter-play-wrapper{
+
+.enter-play-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.enter{
-    font-family: 'MotionPicture',Georgia, 'Times New Roman', Times, serif;
+
+.enter {
+    font-family: 'MotionPicture', Georgia, 'Times New Roman', Times, serif;
     font-size: 12rem;
     color: gold;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
-    
+
 }
-.enter:hover{
-    color:rgb(180, 13, 13);
+
+.enter:hover {
+    color: rgb(180, 13, 13);
 }
-.enter:active{
+
+.enter:active {
     transform: scale(0.98);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
     transform: translateY(4px);
 }
-.how-to{
+
+.how-to {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4rem;
     margin-top: 2rem;
     color: antiquewhite;
     text-shadow: 1px 1px 1px #030303;
 }
-.how-to:hover{
+
+.how-to:hover {
     color: #030303;
     text-shadow: 1px 1px 1px antiquewhite;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.modal-hero{
+
+/* Modal styles */
+.modal-hero {
     display: none;
     border-radius: 20%;
     margin-top: 2rem;
@@ -73,9 +90,10 @@ a{
     left: 2;
     width: 30rem;
     height: 28rem;
-    background-color: rgb(221, 223, 126);
+    background-image: linear-gradient(45deg, rgb(225, 225, 117),antiquewhite);
 }
-.modal-instructions{
+
+.modal-instructions {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
     line-height: 2rem;
@@ -84,52 +102,79 @@ a{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-.close-modal{
+
+.close-modal {
     width: 10rem;
     margin: 1rem;
+    border-radius: 50%;
     padding: 5px 5px;
     background-color: green;
     color: gold;
 }
 
+/* Game page styles */
+.logo {
+    font-family: 'MotionPicture';
+    font-size: 4rem;
+    text-align: center;
+}
 
+.result-style{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    width: 24rem;
+    height: 6rem;
+    margin-top: 4rem;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+
+}
+.result-style ul li {
+    display: inline;
+
+}
 
 
 
 /* sizing for tablets / laptops */
-@media screen and (min-width:768px){
-    .card-size{
-        width:12rem;
+@media screen and (min-width:768px) {
+    .card-size {
+        width: 12rem;
         box-shadow: 2px 2px 2px #333333;
     }
-    .golden-text{
+
+    .golden-text {
         margin-top: 10%;
         font-size: 10rem;
     }
-    
+
 }
+
 /* sizing for desktop */
-@media screen and (min-width:1080px){
-    .card-size{
-        width:16rem;
+@media screen and (min-width:1080px) {
+    .card-size {
+        width: 16rem;
         box-shadow: 2px 2px 2px #333333;
     }
-    .modal-hero{
+
+    .modal-hero {
         width: 50rem;
         height: 30rem;
     }
-    .modal-instructions{
+
+    .modal-instructions {
         margin-top: 4rem;
         font-size: 2rem;
         line-height: 3rem;
     }
-    .golden-text{
+
+    .golden-text {
         margin-top: 0%;
         font-size: 12rem;
     }
-    
-    
+
+
 }
-
-
-
