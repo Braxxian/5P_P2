@@ -12,9 +12,12 @@
 </head>
 
 <body>
+    <!-- logo header -->
     <header>
         <h1 class="logo">Black Jacks' Casino</h1>
     </header>
+
+    <!--Game results-->
     <div id="result-box" class="result-style">
         <ul>
             <li>Played:<span id="played-num">0</span></li>
@@ -22,6 +25,34 @@
             <li>Lost:<span id="lost-num">0</span></li>
         </ul>
     </div>
+
+    <!--Win / Lose notification-->
+    <div id="win-lose" class="win-lose-area">
+        <p>You won!</p>
+    </div>
+
+    <!--Dealer Area-->
+    <div id="dealer-cards" class="dealer-card-wrapper">
+        <img id="dealer-card-1" class="card-size" src="assets/images/cards/BACK.png" alt="king of spades">
+        <img id="dealer-card-2" class="card-size" src="assets/images/cards/A-S.png" alt="ace of spades">
+    </div>
+    <div class="dealer-button">
+        <button id="dealer-play" aria-label="Dealer">Dealer</button>
+    </div>
+
+    <!--Player area-->
+    <div id="player-cards" class="player-card-wrapper">
+        <img id="player-card-1" class="card-size" src="assets/images/cards/BACK.png" alt="king of spades">
+        <img id="player-card-2" class="card-size" src="assets/images/cards/A-S.png" alt="ace of spades">
+    </div>
+    <div class="player-button">
+        <button id="player-play" aria-label="player">Hit me!</button>
+    </div>
+    <div class="options">
+        <button id="stay" class="player-options" aria-label="Stay">Stay</button>
+        <button class="player-options" aria-label="Quit" onclick="window.location.href = 'index.html';">Quit</button>
+    </div>
+
 
 
     <script src="assets/js/script.js"></script>
