@@ -34,7 +34,6 @@
     justify-content: space-around;
 }
 
-
 .card-size {
     width: 8rem;
     box-shadow: 2px 2px 2px #333333;
@@ -114,6 +113,9 @@ a {
     padding: 5px 5px;
     background-color: green;
     color: gold;
+}
+.close-modal:hover{
+    cursor: pointer;
 }
 
 /* Game page styles */
@@ -243,9 +245,6 @@ a {
     background-color: #000000;
 }
 
-
-
-
 /* sizing for tablets / laptops */
 @media screen and (min-width:768px) {
     .card-size {
@@ -282,6 +281,4 @@ a {
         margin-top: 0%;
         font-size: 12rem;
     }
-
-
 }
