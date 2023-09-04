@@ -8,6 +8,7 @@ function closeModal() {
 }
 window.onload = function () {
     assembleDeck();
+    shuffle();
 }
 function assembleDeck() {
     const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
@@ -18,6 +19,13 @@ function assembleDeck() {
             deck.push(values[value] + "-" + suits[suit]);
         }
     }
+}
+function shuffle() {
+    for (let i in deck) {
+        let random = Math.floor(Math.random() * 52);
+        let swap = deck[i];
+        deck[i] = deck[random];
+        deck[random] = swap;
+    }
     console.log(deck);
-
 }
