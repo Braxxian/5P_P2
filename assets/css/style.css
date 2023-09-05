@@ -206,7 +206,7 @@ a {
     letter-spacing: 0.3rem;
     color:#000000;
     background-color: gold;
-    transition: 0.3s;
+    text-align: left;
 }
 #player-play:hover{
     background-color: red;
