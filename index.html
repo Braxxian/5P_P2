@@ -12,32 +12,34 @@
 </head>
 
 <body>
-    <header class="golden-text">Black Jacks' Casino</header>
-    <div class=card-wrapper>
-        <img class="card-size" src="assets/images/cards/K-S.png" alt="king of spades">
-        <img class="card-size" src="assets/images/cards/A-S.png" alt="ace of spades">
-    </div>
-    <div class="enter-play-wrapper">
-        <a href="game.html" aria-label="Go to game page">
-            <p class="enter">Enter</p>
-        </a>
-        <!--trigger modal-->
-        <p class="how-to" onclick="modal()" aria-label="open intructions">How to play</p>
-        <!--the modal-->
-        <div id="how-to-play" class="modal-hero">
-            <div class="modal-instructions">
-                <p>Get a hand that adds to 21 or as close as possible</p>
-                <p>Start with two cards</p>
-                <p>Choose to draw another card or, if you have 15 plus</p>
-                <p>Choose to stay</p>
-                <p>Picture cards are worth 10 & Aces 1 or 11</p>
-                <p>If you go over 21, you are bust</p>
-                <p>In a tie, banker always wins</p>
-                <button class="close-modal" onclick="closeModal()" aria-label="close insructions">Close</button>
-            </div>
+    <main class="overlay">
+        <header class="golden-text">Black Jacks' Casino</header>
+        <div class=card-wrapper>
+            <img class="card-size" src="assets/images/cards/K-S.png" alt="king of spades">
+            <img class="card-size" src="assets/images/cards/A-S.png" alt="ace of spades">
         </div>
+        <div class="enter-play-wrapper">
+            <a href="game.html" aria-label="Go to game page">
+                <p class="enter">Enter</p>
+            </a>
+            <!--trigger modal-->
+            <p class="how-to" onclick="modal()" aria-label="open intructions">How to play</p>
+            <!--the modal-->
+            <div id="how-to-play" class="modal-hero">
+                <div class="modal-instructions">
+                    <p>Get a hand that adds to 21 or as close as possible</p>
+                    <p>Start with two cards</p>
+                    <p>Choose to draw another card or, if you have 15 plus</p>
+                    <p>Choose to stay</p>
+                    <p>Picture cards are worth 10 & Aces 1 or 11</p>
+                    <p>If you go over 21, you are bust</p>
+                    <p>In a tie, banker always wins</p>
+                    <button class="close-modal" onclick="closeModal()" aria-label="close insructions">Close</button>
+                </div>
+            </div>
 
-    </div>
+        </div>
+    </main>
 
     <script src="assets/js/script.js"></script>
 </body>
