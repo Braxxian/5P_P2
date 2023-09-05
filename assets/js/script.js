@@ -24,7 +24,6 @@ let cardBack;
 // boolean for 'hit-me' condition
 let hitMe = true;
 
-
 window.onload = function () {
     assembleDeck();
     shuffle();
@@ -48,18 +47,27 @@ let shuffle = () => {
         deck[random] = swap;
     }
 }
-//'deals' a card from the top of the deck
+
 let startGame = () => {
     cardBack = deck.shift();
     dealerHand += getValue(cardBack);
     dealerAce += checkAce(cardBack);
 
+    while (dealerHand < 17) {
+        let dealtCard = document.createElement("img");
+        let card = deck.shift();
+        dealtCard.src = "assets/images/cards/" + card + ".png";
+        dealtCard.style.width = "80px";
+        dealerHand += getValue(card);
+        dealerAce += checkAce(card);
+        document.getElementById("dealer-cards").append(dealtCard);
+    }
+    console.log(dealerHand);
 }
 // removes the "-" and returns an array [value, suit]
 let getValue = (card) => {
     let cardValue = card.split("-");
     let value = cardValue[0];
-    console.log(value);
     // assigns numeric value to ace & picture cards
     if (isNaN(value)) {
         if (value == "A") {
