@@ -10,6 +10,29 @@ const values = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
 const suits = ["C", "D", "H", "S"];
 let deck = [];
 
+//track hands values
+let dealerHand = 0;
+let playerHand = 0;
+
+//track aces in a hand
+let playerAce = 0;
+let dealerAce = 0;
+
+//track hidden card
+let cardBack;
+
+// boolean for 'hit-me' condition
+let hitMe = true;
+
+
+window.onload = function () {
+    assembleDeck();
+    shuffle();
+    startGame();
+    console.log(deck);
+
+}
+
 function assembleDeck() {
     deck = [];
     for (let suit in suits) {
@@ -26,19 +49,16 @@ function shuffle() {
         deck[random] = swap;
     }
 }
-function loadDeck() {
-    assembleDeck();
-    shuffle();
+function startGame() {
+    cardBack = deck.shift();
+    dealerHand += getValue(cardBack);
+
 }
-function dealCard() {
-    if (deck.length === 0) {
-        window.alert("Deck is empty, please restart the Game");
-    }
-    let card = deck.shift();
-    console.log(card);
+function getValue(card) {
+    let showCardBack = card.split("-");
 }
-loadDeck();
-dealCard();
+
+
 
 
 
