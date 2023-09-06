@@ -21,6 +21,7 @@ let dealerAce = 0;
 //track dealer's hidden card
 let cardBack;
 
+
 // boolean for 'hit-me' condition
 let hitMe = true;
 
@@ -65,6 +66,8 @@ let dealerTurn = () => {
         let showDealerScore = document.getElementById("dealer-score");
         showDealerScore.textContent = `Dealer: ${dealerHand}`;
     }
+    winnerDecide();
+
 }
 //give player two starting cards
 let playerStart = () => {
@@ -80,6 +83,7 @@ let playerStart = () => {
     let showPlayerScore = document.getElementById("player-play");
     showPlayerScore.textContent = `Player: ${playerHand}`;
     document.getElementById("player-play").addEventListener("click", deal);
+    document.getElementById("stay").addEventListener("click", stay);
 }
 // removes the "-" and returns an array [value, suit]
 let getValue = (card) => {
@@ -110,8 +114,11 @@ let lesserAce = () => {
 }
 // deal card to player
 let deal = () => {
-    if (!hitMe) {
+    if (!hitMe && playerHand > 21) {
         window.alert("You are bust! You cannot draw more cards")
+        return;
+    } else if (!hitMe) {
+        window.alert("You decided to Stay!")
         return;
     }
     let dealtCard = document.createElement("img");
@@ -128,6 +135,28 @@ let deal = () => {
     let showPlayerScore = document.getElementById("player-play");
     showPlayerScore.textContent = `Hit: ${playerHand}`;
 }
+let stay = () => {
+    if (playerHand < 15) {
+        window.alert("You must have a score of 15 plus to stay")
+    } else
+        hitMe = false;
+}
+let winnerDecide = () => {
+    document.getElementById("dealer-card-1").src = "assets/images/cards/" + cardBack + ".png";
+    if (playerHand > 21) {
+        document.getElementById("win-lose").textContent = "You went Bust!";
+    } else if (dealerHand > 21) {
+        document.getElementById("win-lose").textContent = "You Won!";
+    } else if (playerHand == dealerHand) {
+        document.getElementById("win-lose").textContent = "Tie! Banker wins";
+    } else if (playerHand > dealerHand) {
+        document.getElementById("win-lose").textContent = "You Won!";
+    } else if (playerHand < dealerHand) {
+        document.getElementById("win-lose").textContent = "You Lose!";
+    }
+
+}
+
 
 
 
