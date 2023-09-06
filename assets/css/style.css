@@ -32,7 +32,7 @@
 
 .golden-text {
     font-family: 'MotionPicture', Georgia, 'Times New Roman', Times, serif;
-    font-size: 8rem;
+    font-size: 6rem;
     color: gold;
     text-align: center;
     margin-top: 4rem;
@@ -104,15 +104,16 @@ a {
     z-index: 1;
     left: 2;
     width: 25rem;
-    height: 25rem;
+    height: 28rem;
     background-image: linear-gradient(45deg, black, #666666);
 }
 
 .modal-instructions {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: gold;
+    color: #c8c8c8;
+    text-shadow: 1px 1px 1px #000000;
     font-size: 1.8rem;
-    line-height: 2rem;
+    line-height: 2.3rem;
     text-align: center;
     margin-top: 2rem;
     padding-left: 0.5rem;
@@ -120,12 +121,13 @@ a {
 }
 
 .close-modal {
+    font-family: 'MotionPicture', Georgia, 'Times New Roman', Times, serif;
+    font-size: 4rem;
     width: 10rem;
     margin: 1rem;
     border-radius: 10%;
-    padding: 5px 5px;
-    background-color: rgb(5, 71, 5);
-    color: gold;
+    background-color: #c8c8c8;
+    color: #000000;
 }
 
 .close-modal:hover {
@@ -133,7 +135,7 @@ a {
 }
 
 /* Game page styles */
-.header{
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -281,7 +283,7 @@ a {
 }
 
 .player-options:hover {
-    background-color:#000000;
+    background-color: #000000;
     color: gold;
     cursor: pointer;
 }
@@ -292,6 +294,11 @@ a {
 
 /* sizing for tablets / laptops */
 @media screen and (min-width:768px) {
+    .modal-hero {
+        width: 50rem;
+        height: 30rem;
+    }
+
     .card-size {
         width: 12rem;
         box-shadow: 2px 2px 2px #333333;
@@ -317,7 +324,7 @@ a {
 
     .modal-hero {
         width: 50rem;
-        height: 30rem;
+        height: 40rem;
     }
 
     .modal-instructions {
