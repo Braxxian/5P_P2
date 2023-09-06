@@ -27,7 +27,8 @@ let hitMe = true;
 window.onload = function () {
     assembleDeck();
     shuffle();
-    startGame();
+    playerStart();
+    /*startGame();*/
 }
 // populates the deck array with all 52 cards
 let assembleDeck = () => {
@@ -48,11 +49,11 @@ let shuffle = () => {
     }
 }
 
-let startGame = () => {
+let dealerTurn = () => {
     cardBack = deck.shift();
     dealerHand += getValue(cardBack);
     dealerAce += checkAce(cardBack);
-
+    //get dealer cards
     while (dealerHand < 17) {
         let dealtCard = document.createElement("img");
         let card = deck.shift();
@@ -61,8 +62,23 @@ let startGame = () => {
         dealerHand += getValue(card);
         dealerAce += checkAce(card);
         document.getElementById("dealer-cards").append(dealtCard);
+        let showDealerScore = document.getElementById("dealer-score");
+        showDealerScore.textContent = `Dealer: ${dealerHand}`;
     }
-    console.log(dealerHand);
+}
+
+let playerStart = () => {
+    //give player two starting cards
+    for (let i = 0; i < 2; i++) {
+        let dealtCard = document.createElement("img");
+        let card = deck.shift();
+        dealtCard.src = "assets/images/cards/" + card + ".png";
+        dealtCard.className = "card-size";
+        playerHand += getValue(card);
+        playerAce += checkAce(card);
+        document.getElementById("player-cards").append(dealtCard);
+    }
+    document.getElementById("player-play").addEventListener("click", deal);
 }
 // removes the "-" and returns an array [value, suit]
 let getValue = (card) => {
@@ -84,6 +100,33 @@ let checkAce = (card) => {
     }
     return 0;
 }
+let lesserAce = () => {
+    while (playerHand > 21 && playerAce > 0) {
+        playerHand -= 10;
+        playerAce -= 1;
+    }
+    return playerHand;
+}
+// deal card to player
+let deal = () => {
+    if (!hitMe) {
+        return;
+    }
+    let dealtCard = document.createElement("img");
+    let card = deck.shift();
+    dealtCard.src = "assets/images/cards/" + card + ".png";
+    dealtCard.className = "card-size";
+    playerHand += getValue(card);
+    playerAce += checkAce(card);
+    document.getElementById("player-cards").append(dealtCard);
+    console.log(playerHand);
+    if (lesserAce(playerHand, playerAce) > 21) {
+        hitMe = false;
+    }
+    let showPlayerScore = document.getElementById("player-play");
+    showPlayerScore.textContent = `Hit: ${playerHand}`;
+}
+
 
 
 

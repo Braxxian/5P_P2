@@ -11,7 +11,8 @@
     height: 100vh;
     font-size: 62.5%;
 }
-#green-table{
+
+#green-table {
     background: url("../images/green-game-table.jpg") no-repeat center center /cover;
     height: 100vh;
 }
@@ -22,12 +23,13 @@
 }
 
 /* Hero page styles */
-.overlay{
+.overlay {
     background-color: rgba(62, 62, 61, 0.6);
     width: 80%;
     height: 90vh;
     margin: 0 auto;
 }
+
 .golden-text {
     font-family: 'MotionPicture', Georgia, 'Times New Roman', Times, serif;
     font-size: 8rem;
@@ -103,7 +105,7 @@ a {
     left: 2;
     width: 25rem;
     height: 25rem;
-    background-image:linear-gradient(45deg,black, #666666);
+    background-image: linear-gradient(45deg, black, #666666);
 }
 
 .modal-instructions {
@@ -125,7 +127,8 @@ a {
     background-color: rgb(5, 71, 5);
     color: gold;
 }
-.close-modal:hover{
+
+.close-modal:hover {
     cursor: pointer;
 }
 
@@ -137,13 +140,14 @@ a {
     text-align: center;
     text-shadow: 1px 1px 2px gold;
 }
+
 /* results */
-.result-style{
+.result-style {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:gold;
+    background-color: gold;
     width: 20rem;
     height: 3rem;
     margin-top: 1rem;
@@ -152,110 +156,127 @@ a {
     box-shadow: 2px 2px 2px #333333;
 
 }
+
 .result-style ul li {
     display: inline;
 }
+
 /* win / lose Box */
-.win-lose-area{
+.win-lose-area {
     margin-top: 6rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4rem;
     text-align: center;
     color: gold;
 }
+
 /* Dealer Section */
 
-.dealer-card-wrapper{
+.dealer-card-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
-.dealer-window{
+
+.dealer-window {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
 }
-.dealer-play{
+
+.dealer-play {
     padding-top: 0.2rem;
     padding-left: 0.2rem;
-    width: 18rem;
+    width: 20rem;
     height: 4.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3.5rem;
     font-weight: 600;
-    color:#000000;
+    color: #000000;
     background-color: gold;
 }
-#dealer-play:hover{
+
+.dealer-play:hover {
     background-color: #030303;
     color: gold;
     cursor: pointer;
 }
-#dealer-play:active{
+
+.dealer-play:active {
     color: black;
 }
+
 /* Player Section */
 
-.player-card-wrapper{
+.player-card-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
 }
-.player-button{
+
+.player-button {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
 }
-#player-play{
+
+#player-play {
     padding-left: 0.2rem;
-    width: 18rem;
+    width: 20rem;
     height: 4.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 3.5rem;
     font-weight: 600;
     letter-spacing: 0.3rem;
-    color:#000000;
+    color: #000000;
     background-color: gold;
     text-align: left;
 }
-#player-play:hover{
-    background-color: red;
+
+#player-play:hover {
+    color: gold;
+    background-color: #000000;
     cursor: pointer;
 }
-#player-play:active{
+
+#player-play:active {
     background-color: #000000;
 }
-.options{
+
+.options {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.player-options{
+
+.player-options {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    width: 8rem;
+    width: 9rem;
     height: 4rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
     font-size: 2rem;
-    color:#000000;
+    color: #000000;
     background-color: gold;
     text-shadow: 1px 1px 2px #333333;
     letter-spacing: 0.25rem;
     transition: 0.3s;
 }
-.player-options:hover{
+
+.player-options:hover {
     background-color: red;
     cursor: pointer;
 }
-.player-options:active{
+
+.player-options:active {
     background-color: #000000;
 }
 
@@ -270,14 +291,15 @@ a {
         margin-top: 10%;
         font-size: 10rem;
     }
-    
+
 }
 
 /* sizing for desktop */
 @media screen and (min-width:1080px) {
-    body{
+    body {
         background-image: url("../images/floating-ace-1.jpg") no-repeat;
     }
+
     .card-size {
         width: 16rem;
         box-shadow: 2px 2px 2px #333333;
@@ -297,7 +319,8 @@ a {
         margin-top: 0%;
         font-size: 12rem;
     }
-    .win-lose-area{
+
+    .win-lose-area {
         margin-top: 0;
     }
 }
