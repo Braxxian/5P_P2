@@ -66,9 +66,8 @@ let dealerTurn = () => {
         showDealerScore.textContent = `Dealer: ${dealerHand}`;
     }
 }
-
+//give player two starting cards
 let playerStart = () => {
-    //give player two starting cards
     for (let i = 0; i < 2; i++) {
         let dealtCard = document.createElement("img");
         let card = deck.shift();
@@ -110,6 +109,7 @@ let lesserAce = () => {
 // deal card to player
 let deal = () => {
     if (!hitMe) {
+        window.alert("You are bust! You cannot draw more cards")
         return;
     }
     let dealtCard = document.createElement("img");

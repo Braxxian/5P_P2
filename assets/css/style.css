@@ -197,6 +197,7 @@ a {
     font-weight: 600;
     color: #000000;
     background-color: gold;
+    box-shadow: 2px 2px 2px #000000;
 }
 
 .dealer-play:hover {
