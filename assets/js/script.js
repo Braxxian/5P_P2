@@ -99,12 +99,14 @@ let getValue = (card) => {
     //returns card string value as an integer
     return parseInt(value);
 }
+// checks if a player is holding an ace
 let checkAce = (card) => {
     if (card[0] == "A") {
         return 1;
     }
     return 0;
 }
+// chooses the lower value of ace if otherwise 'bust'
 let lesserAce = () => {
     while (playerHand > 21 && playerAce > 0) {
         playerHand -= 10;

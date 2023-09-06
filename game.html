@@ -13,18 +13,10 @@
 
 <body id="green-table">
     <!-- logo header -->
-    <header>
+    <header class="header">
+        <button class="player-options" aria-label="home" onclick="window.location.href = 'index.html';">Home</button>
         <h1 class="logo">Black Jacks' Casino</h1>
     </header>
-
-    <!--Game results-->
-    <div id="result-box" class="result-style">
-        <ul>
-            <li>Played:<span id="played-num">0</span></li>
-            <li>Won:<span id="win-num">0</span></li>
-            <li>Lost:<span id="lost-num">0</span></li>
-        </ul>
-    </div>
 
     <!--Win / Lose notification-->
     <div class="win-lose-area">
@@ -37,7 +29,7 @@
     </div>
 
     <div class="dealer-window">
-        <p id="dealer-score" class="dealer-play" onclick=dealerTurn() aria-label="Dealer Score">Dealer:</p>
+        <button id="dealer-score" class="dealer-play" onclick=dealerTurn() aria-label="Dealer Score">Dealer:</button>
     </div>
 
     <!--Player area-->
@@ -48,7 +40,8 @@
     </div>
     <div class="options">
         <button id="stay" class="player-options" aria-label="Stay">Stay</button>
-        <button class="player-options" aria-label="Quit" onclick="window.location.href = 'index.html';">Quit</button>
+
+        <button id="new-game" class="player-options" aria-label="new game">New Game</button>
     </div>
 
 

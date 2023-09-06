@@ -133,10 +133,16 @@ a {
 }
 
 /* Game page styles */
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .logo {
     font-family: 'MotionPicture';
-    font-size: 4rem;
+    font-size: 6rem;
     text-align: center;
     text-shadow: 1px 1px 2px gold;
 }
@@ -163,7 +169,7 @@ a {
 
 /* win / lose Box */
 .win-lose-area {
-    margin-top: 6rem;
+    margin-top: 2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4rem;
     text-align: center;
@@ -189,15 +195,16 @@ a {
 
 .dealer-play {
     padding-top: 0.2rem;
-    padding-left: 0.2rem;
+    padding-left: 1rem;
     width: 20rem;
     height: 4.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 600;
     color: #000000;
     background-color: gold;
     box-shadow: 2px 2px 2px #000000;
+    transition: 0.3s;
 }
 
 .dealer-play:hover {
@@ -228,16 +235,17 @@ a {
 }
 
 #player-play {
-    padding-left: 0.2rem;
+    padding-left: 1rem;
     width: 20rem;
     height: 4.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 600;
     text-align: center;
     color: #000000;
     background-color: gold;
     text-align: left;
+    transition: 0.3s;
 }
 
 #player-play:hover {
@@ -265,15 +273,16 @@ a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
     font-size: 2rem;
+    line-height: 1.6rem;
     color: #000000;
     background-color: gold;
     text-shadow: 1px 1px 2px #333333;
-    letter-spacing: 0.25rem;
     transition: 0.3s;
 }
 
 .player-options:hover {
-    background-color: red;
+    background-color:#000000;
+    color: gold;
     cursor: pointer;
 }
 
@@ -302,7 +311,7 @@ a {
     }
 
     .card-size {
-        width: 16rem;
+        width: 14rem;
         box-shadow: 2px 2px 2px #333333;
     }
 
