@@ -77,6 +77,8 @@ let playerStart = () => {
         playerAce += checkAce(card);
         document.getElementById("player-cards").append(dealtCard);
     }
+    let showPlayerScore = document.getElementById("player-play");
+    showPlayerScore.textContent = `Player: ${playerHand}`;
     document.getElementById("player-play").addEventListener("click", deal);
 }
 // removes the "-" and returns an array [value, suit]
