@@ -12,7 +12,6 @@ The game is intended for entertainment purposes only and does not involve any fo
 ### Table of contents (to be filled)
 
 ## Planning & Development
-
 ### User stories
 
 * As a user I want an entertaining game that can be enjoyed in short leisure breaks
@@ -27,13 +26,25 @@ The game is intended for entertainment purposes only and does not involve any fo
 * As the site owner I want to be able to extend the sites features in future development
 
 ### Features
-
+#### The Hero Page
 * The site has been designed to perform and size well on all commonly used devices
 * The hero page is designed to provide clear and simple navigation to the user, with 2 options: 'Enter' or 'Learn how to play'
 * Clicking the enter button, confirms the user action by changing in color and size and the 'how to play' option opens a modal 'pop-up' with the game instructions:
 
 <img src="assets/docs/hero.JPG" width="280">
 <img src="assets/docs/modal.JPG" width="280">
+
+#### The game page
+
+* The gaming area is designed to fit comfortably on all common device sizes. It presents the user with a graphical simulation of a game of cards in a casino.
+* The bankers card is hidden until the 'dealer' plays, giving an element of suspense to the result
+* The user can interact with the game by requesting another card or choose to stay with the current hand. The user may then initiate the dealer button to reveal the bankers' cards.
+* The result is displayed in the 'Good Luck!' placeholder area.
+* The user may then choose to move to the next game or return to the home page
+
+<img src="assets/docs/game-375px.JPG" width="200">
+
+iPhone SE 375px
 
 
 
