@@ -130,7 +130,6 @@ let deal = () => {
     playerHand += getValue(card);
     playerAce += checkAce(card);
     document.getElementById("player-cards").append(dealtCard);
-    console.log(playerHand);
     if (lesserAce(playerHand, playerAce) > 21) {
         hitMe = false;
     }
