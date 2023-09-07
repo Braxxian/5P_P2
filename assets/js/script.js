@@ -21,7 +21,6 @@ let dealerAce = 0;
 //track dealer's hidden card
 let cardBack;
 
-
 // boolean for 'hit-me' condition
 let hitMe = true;
 

@@ -154,6 +154,7 @@ a {
     font-size: 4rem;
     text-align: center;
     color: gold;
+    text-shadow: 2px 2px 2px #000000;
 }
 
 /* Dealer Section */
