@@ -29,7 +29,7 @@ window.onload = function () {
     assembleDeck();
     shuffle();
     playerStart();
-    /*startGame();*/
+
 };
 // populates the deck array with all 52 cards
 let assembleDeck = () => {
@@ -163,6 +163,8 @@ let winnerDecide = () => {
     }
 
 };
+
+
 
 
 
