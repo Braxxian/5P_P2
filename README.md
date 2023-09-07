@@ -1,7 +1,7 @@
 # 'Black' Jack's Casino
 A card game pitching player vs computer.
 
-![Am I Responsive](assets/docs/amiresponsive.jpg)
+![Am I Responsive](assets/docs/amiresponsive/.jpg)
 
 The game is intended for entertainment purposes only and does not involve any form of gambling. The target audience are adults looking for an entertaining game which can be enjoyed in moments of leisure, such as 'tea-breaks', 'lunch-breaks', etc
 
