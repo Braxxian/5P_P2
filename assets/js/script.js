@@ -1,8 +1,8 @@
-let modal = () => {
+function modal() {
     let modal = document.getElementById("how-to-play");
     modal.style.display = "block";
 }
-let closeModal = () => {
+function closeModal() {
     let modal = document.getElementById("how-to-play");
     modal.style.display = "none";
 }
@@ -30,25 +30,31 @@ window.onload = function () {
     shuffle();
     playerStart();
     /*startGame();*/
-}
+};
 // populates the deck array with all 52 cards
 let assembleDeck = () => {
     deck = [];
     for (let suit in suits) {
-        for (let value in values) {
-            deck.push(values[value] + "-" + suits[suit]);
+        if (suits.hasOwnProperty(suit)) {
+            for (let value in values) {
+                if (values.hasOwnProperty(value)) {
+                    deck.push(values[value] + "-" + suits[suit]);
+                }
+            }
         }
     }
-}
+};
 //uses the 'temp var swap' method to cycle random placement of cards
 let shuffle = () => {
     for (let i in deck) {
-        let random = Math.floor(Math.random() * 52);
-        let swap = deck[i];
-        deck[i] = deck[random];
-        deck[random] = swap;
+        if (deck.hasOwnProperty(i)) {
+            let random = Math.floor(Math.random() * 52);
+            let swap = deck[i];
+            deck[i] = deck[random];
+            deck[random] = swap;
+        }
     }
-}
+};
 
 let dealerTurn = () => {
     cardBack = deck.shift();
@@ -68,7 +74,7 @@ let dealerTurn = () => {
     }
     winnerDecide();
 
-}
+};
 //give player two starting cards
 let playerStart = () => {
     for (let i = 0; i < 2; i++) {
@@ -84,7 +90,7 @@ let playerStart = () => {
     showPlayerScore.textContent = `Player: ${playerHand}`;
     document.getElementById("player-play").addEventListener("click", deal);
     document.getElementById("stay").addEventListener("click", stay);
-}
+};
 // removes the "-" and returns an array [value, suit]
 let getValue = (card) => {
     let cardValue = card.split("-");
@@ -98,14 +104,14 @@ let getValue = (card) => {
     }
     //returns card string value as an integer
     return parseInt(value);
-}
+};
 // checks if a player is holding an ace
 let checkAce = (card) => {
     if (card[0] == "A") {
         return 1;
     }
     return 0;
-}
+};
 // chooses the lower value of ace if otherwise 'bust'
 let lesserAce = () => {
     while (playerHand > 21 && playerAce > 0) {
@@ -113,14 +119,14 @@ let lesserAce = () => {
         playerAce -= 1;
     }
     return playerHand;
-}
+};
 // deal card to player
 let deal = () => {
     if (!hitMe && playerHand > 21) {
-        window.alert("You are bust! You cannot draw more cards")
+        window.alert("You are bust! You cannot draw more cards");
         return;
     } else if (!hitMe) {
-        window.alert("You decided to Stay!")
+        window.alert("You decided to Stay!");
         return;
     }
     let dealtCard = document.createElement("img");
@@ -135,13 +141,13 @@ let deal = () => {
     }
     let showPlayerScore = document.getElementById("player-play");
     showPlayerScore.textContent = `Hit: ${playerHand}`;
-}
+};
 let stay = () => {
     if (playerHand < 15) {
-        window.alert("You must have a score of 15 plus to stay")
+        window.alert("You must have a score of 15 plus to stay");
     } else
         hitMe = false;
-}
+};
 let winnerDecide = () => {
     document.getElementById("dealer-card-1").src = "assets/images/cards/" + cardBack + ".webp";
     if (playerHand > 21) {
@@ -156,7 +162,7 @@ let winnerDecide = () => {
         document.getElementById("win-lose").textContent = "You Lose!";
     }
 
-}
+};
 
 
 
