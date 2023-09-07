@@ -58,7 +58,7 @@ let dealerTurn = () => {
     while (dealerHand < 17) {
         let dealtCard = document.createElement("img");
         let card = deck.shift();
-        dealtCard.src = "assets/images/cards/" + card + ".png";
+        dealtCard.src = "assets/images/cards/" + card + ".webp";
         dealtCard.className = "card-size";
         dealerHand += getValue(card);
         dealerAce += checkAce(card);
@@ -74,7 +74,7 @@ let playerStart = () => {
     for (let i = 0; i < 2; i++) {
         let dealtCard = document.createElement("img");
         let card = deck.shift();
-        dealtCard.src = "assets/images/cards/" + card + ".png";
+        dealtCard.src = "assets/images/cards/" + card + ".webp";
         dealtCard.className = "card-size";
         playerHand += getValue(card);
         playerAce += checkAce(card);
@@ -125,7 +125,7 @@ let deal = () => {
     }
     let dealtCard = document.createElement("img");
     let card = deck.shift();
-    dealtCard.src = "assets/images/cards/" + card + ".png";
+    dealtCard.src = "assets/images/cards/" + card + ".webp";
     dealtCard.className = "card-size";
     playerHand += getValue(card);
     playerAce += checkAce(card);
@@ -143,7 +143,7 @@ let stay = () => {
         hitMe = false;
 }
 let winnerDecide = () => {
-    document.getElementById("dealer-card-1").src = "assets/images/cards/" + cardBack + ".png";
+    document.getElementById("dealer-card-1").src = "assets/images/cards/" + cardBack + ".webp";
     if (playerHand > 21) {
         document.getElementById("win-lose").textContent = "You went Bust!";
     } else if (dealerHand > 21) {
