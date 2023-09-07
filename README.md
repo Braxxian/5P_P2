@@ -42,9 +42,44 @@ The game is intended for entertainment purposes only and does not involve any fo
 * The result is displayed in the 'Good Luck!' placeholder area.
 * The user may then choose to move to the next game or return to the home page
 
-<img src="assets/docs/game-375px.JPG" width="200">
+<img src="assets/docs/game-375px.JPG" width="200"> <img src="assets/docs/game2-375px.JPG" width="200">
 
-iPhone SE 375px
+iPhone SE 375px Starting hand and a lucky win!
+
+### Wireframes
+
+Due to the simple layout and cards resizing. It proved unnecessary
+to use the original desktop layout frames although they are pictured as well for reference. 
+
+<img src="assets/docs/wire-hero-mobile.JPG" width="200"> <img src="assets/docs/wire-game-mobile.JPG" width="200">
+
+<img src="assets/docs/wire-hero-desktop.JPG">
+
+<img src="assets/docs/wire-game-desktop.JPG">
+
+Here is the live deployment for desktops for comparison. It proved a better design, due to card space when a player has a larger hand.
+
+<img src="assets/docs/desktop-game.JPG">
+
+
+### Color Scheme
+
+The green color of the card table and the nature of the game made
+black and gold a simple and obvious choice. They work well together
+as contrasts, provide easily reversed shadows and have an evocative
+quality, in keeping with the casino theme.
+
+### Fonts
+
+The 'Black Jacks' casino name and the enter button used 'MotionPicture'. A font by 'Mans Greback', sourced from https://www.1001fonts.com/. not licenced for commerical use and used only as a personal project
+
+Georgia, 'Times New Roman', Times, serif; 
+
+### Images
+
+The Hero image and the game area image were both sourced from https://www.freepik.com/
+
+The card images were taken from [ https://github.com/ImKennyYip/black-jack](#credits)
 
 
 
@@ -52,3 +87,4 @@ iPhone SE 375px
 
 
 
+## Credits
