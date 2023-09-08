@@ -56,6 +56,10 @@ let shuffle = () => {
 };
 
 let dealerTurn = () => {
+    if (playerHand < 15){
+        window.alert("Player must finish before dealer plays");
+        return;
+    }
     cardBack = deck.shift();
     dealerHand += getValue(cardBack);
     dealerAce += checkAce(cardBack);
@@ -139,7 +143,7 @@ let deal = () => {
         hitMe = false;
     }
     let showPlayerScore = document.getElementById("player-play");
-    showPlayerScore.textContent = `Hit: ${playerHand}`;
+    showPlayerScore.textContent = `Player: ${playerHand}`;
 };
 let stay = () => {
     if (playerHand < 15) {
