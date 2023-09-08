@@ -36,7 +36,7 @@ window.onload = function () {
 
 };
 // populates the deck array with all 52 cards
-let assembleDeck = () => {
+const assembleDeck = () => {
     deck = [];
     for (let suit in suits) {
         if (suits.hasOwnProperty(suit)) {
@@ -49,7 +49,7 @@ let assembleDeck = () => {
     }
 };
 //uses the 'temp var swap' method to cycle random placement of cards
-let shuffle = () => {
+const shuffle = () => {
     for (let i in deck) {
         if (deck.hasOwnProperty(i)) {
             let random = Math.floor(Math.random() * 52);
@@ -60,7 +60,7 @@ let shuffle = () => {
     }
 };
 
-let dealerTurn = () => {
+const dealerTurn = () => {
     if (playerHand < 15 || hitMe){
         window.alert("Player must finish before dealer plays");
         return;
@@ -84,7 +84,7 @@ let dealerTurn = () => {
 
 };
 //give player two starting cards
-let playerStart = () => {
+const playerStart = () => {
     for (let i = 0; i < 2; i++) {
         let dealtCard = document.createElement("img");
         let card = deck.shift();
@@ -100,7 +100,7 @@ let playerStart = () => {
     document.getElementById("stay").addEventListener("click", stay);
 };
 // removes the "-" and returns an array [value, suit]
-let getValue = (card) => {
+const getValue = (card) => {
     let cardValue = card.split("-");
     let value = cardValue[0];
     // assigns numeric value to ace & picture cards
@@ -114,14 +114,14 @@ let getValue = (card) => {
     return parseInt(value);
 };
 // checks if a player is holding an ace
-let checkAce = (card) => {
+const checkAce = (card) => {
     if (card[0] == "A") {
         return 1;
     }
     return 0;
 };
 // chooses the lower value of ace if otherwise 'bust'
-let lesserAce = () => {
+const lesserAce = () => {
     while (playerHand > 21 && playerAce > 0) {
         playerHand -= 10;
         playerAce -= 1;
@@ -129,7 +129,7 @@ let lesserAce = () => {
     return playerHand;
 };
 // deal card to player
-let deal = () => {
+const deal = () => {
     if (!hitMe && playerHand > 21) {
         window.alert("You are bust! You cannot draw more cards");
         return;
@@ -150,13 +150,13 @@ let deal = () => {
     let showPlayerScore = document.getElementById("player-play");
     showPlayerScore.textContent = `Player: ${playerHand}`;
 };
-let stay = () => {
+const stay = () => {
     if (playerHand < 15) {
         window.alert("You must have a score of 15 plus to stay");
     } else
         hitMe = false;
 };
-let winnerDecide = () => {
+const winnerDecide = () => {
     document.getElementById("dealer-card-1").src = "assets/images/cards/" + cardBack + ".webp";
     if (playerHand > 21) {
         document.getElementById("win-lose").textContent = "You went Bust!";
