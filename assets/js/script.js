@@ -1,6 +1,6 @@
 /* Game code was based on a walkthrough project by 'Kenny Yip'
- All code has been re-written and freely adapted in an original manner
- to fit the purposes of this project. for full details see Credits
+ All code has been re-written, freely adapted and built upon, in an original manner
+ to fit the purposes of this project. For full details see Credits
  in the README*/
 
 function modal() {
