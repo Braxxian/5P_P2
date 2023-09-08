@@ -1,3 +1,8 @@
+/* Game code was based on a walkthrough project by 'Kenny Yip'
+ All code has been re-written and freely adapted in an original manner
+ to fit the purposes of this project. for full details see Credits
+ in the README*/
+
 function modal() {
     let modal = document.getElementById("how-to-play");
     modal.style.display = "block";
