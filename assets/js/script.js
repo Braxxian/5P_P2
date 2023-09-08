@@ -56,7 +56,7 @@ let shuffle = () => {
 };
 
 let dealerTurn = () => {
-    if (playerHand < 15){
+    if (playerHand < 15 || hitMe){
         window.alert("Player must finish before dealer plays");
         return;
     }
