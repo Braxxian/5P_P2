@@ -1,5 +1,5 @@
 /* Game code was based on a walkthrough project by 'Kenny Yip'
- All code has been re-written, freely adapted and built upon, in an original manner
+ The code has been re-written, freely adapted and built upon, in an original manner
  to fit the purposes of this project. For full details see Credits
  in the README*/
 
@@ -62,7 +62,9 @@ const shuffle = () => {
 
 const dealerTurn = () => {
     if (playerHand < 15 || hitMe){
-        window.alert("Player must finish before dealer plays");
+        let rules = document.getElementById("win-lose");
+        rules.textContent = "You must play first!"
+        rules.style.fontSize = "2rem";
         return;
     }
     cardBack = deck.shift();
@@ -131,10 +133,14 @@ const lesserAce = () => {
 // deal card to player
 const deal = () => {
     if (!hitMe && playerHand > 21) {
-        window.alert("You are bust! You cannot draw more cards");
+        const rules = document.getElementById("win-lose");
+        rules.textContent = "You are BUST & cannot draw"
+        rules.style.fontSize = "2rem";
         return;
     } else if (!hitMe) {
-        window.alert("You decided to Stay!");
+        const rules = document.getElementById("win-lose");
+        rules.textContent = "You decided to Stay, Dealers Turn"
+        rules.style.fontSize = "2rem";
         return;
     }
     let dealtCard = document.createElement("img");
@@ -152,22 +158,34 @@ const deal = () => {
 };
 const stay = () => {
     if (playerHand < 15) {
-        window.alert("You must have a score of 15 plus to stay");
+        const rules = document.getElementById("win-lose");
+        rules.textContent = "You must have 15 plus to stay!"
+        rules.style.fontSize = "2rem";
     } else
         hitMe = false;
 };
 const winnerDecide = () => {
     document.getElementById("dealer-card-1").src = "assets/images/cards/" + cardBack + ".webp";
     if (playerHand > 21) {
-        document.getElementById("win-lose").textContent = "You went Bust!";
+        const bust = document.getElementById("win-lose");
+        bust.textContent = "You went Bust!"
+        bust.style.fontSize = "4rem";
     } else if (dealerHand > 21) {
-        document.getElementById("win-lose").textContent = "You Won!";
+        const won = document.getElementById("win-lose");
+        won.textContent = "You Win!"
+        won.style.fontSize = "4rem";
     } else if (playerHand == dealerHand) {
-        document.getElementById("win-lose").textContent = "Tie! Banker wins";
+        const tie = document.getElementById("win-lose");
+        tie.textContent = "Tie Banker Wins!"
+        tie.style.fontSize = "4rem";
     } else if (playerHand > dealerHand) {
-        document.getElementById("win-lose").textContent = "You Won!";
+        const win = document.getElementById("win-lose");
+        win.textContent = "You Win!"
+        win.style.fontSize = "4rem";
     } else if (playerHand < dealerHand) {
-        document.getElementById("win-lose").textContent = "You Lose!";
+        const lose = document.getElementById("win-lose");
+        lose.textContent = "You Lose!"
+        lose.style.fontSize = "4rem";
     }
 
 };
