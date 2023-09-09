@@ -9,7 +9,35 @@ The game is intended for entertainment purposes only and does not involve any fo
 
 ['Black' Jacks' Casino-live site](https://braxxian.github.io/5P_P2/)
 
-### Table of contents (to be filled)
+### Table of contents 
+
+[Planning & Development](#planning--development)
+
+[User Stories](#user-stories)
+
+[site Owner Goals](#site-owner-goals)
+
+[Features](#features)
+
+[Wireframes](#wireframes)
+
+[Color Scheme](#color-scheme)
+
+[Fonts](#fonts)
+
+[Images](#images)
+
+[Future Development](#future-development)
+
+[Testing](#testing)
+
+[bugs](#bugs)
+
+[Technologies Used](#technologies-used)
+
+[Deployment](#deployment)
+
+[Credits](#credits)
 
 ## Planning & Development
 ### User stories
@@ -25,7 +53,7 @@ The game is intended for entertainment purposes only and does not involve any fo
 * As the site owner I want to provide the fun of card games without feeding into a gambling narrative
 * As the site owner I want to be able to extend the sites features in future development
 
-### Features
+## Features
 #### The Hero Page
 * The site has been designed to perform and size well on all commonly used devices
 * The hero page is designed to provide clear and simple navigation to the user, with 2 options: 'Enter' or 'Learn how to play'
