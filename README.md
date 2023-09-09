@@ -81,10 +81,114 @@ The Hero image and the game area image were both sourced from https://www.freepi
 
 The card images were taken from [ https://github.com/ImKennyYip/black-jack](#credits)
 
+### Future Development
+
+Looking forward, I would like to implement a persistant score
+tracking method, displaying the win - lose count on a scoreboard.
+
+# Testing
+
+### Manual Testing
+
+#### Illegal moves or player error handling
+
+| Action   |      Expected Result      |  Pass or Fail |
+|:----------|:-------------:|:------:|
+| Player tries to stay while under 15 |  Action fails & player is reminded of the rules | Pass |
+| Player tries to initiate dealers turn before finishing their own |    Action fails and player is prompted to finish their turn first   |   Pass |
+| Player tries to draw a card after choosing to stay | Action fails and player is reminded they chose to stay |    Pass |
 
 
+## HTML Validation
 
+[W3C Markup Validation Service](https://validator.w3.org/) was used for HTML error checking:
 
+<img src="assets/docs/w3schools validation report indexhtml.JPG">
+
+<img src="assets/docs/w3schools validation report gamehtml.JPG">
+
+### CSS Validation
+[Jigsaw](https://jigsaw.w3.org/css-validator/) was used for CSS error checking
+
+<img src="assets/docs/CSS Jigsaw validation.JPG">
+
+### JavaScript Validation
+[JSHint](https://jshint.com/) was used for error checking of code
+
+The report notes 3 unused variables. This is a false positive. The functions are called in the HTML using "onclick()" and not from within the code itself, which is why they are flagged as unused
+
+<img src="assets/docs/JSHint report.JPG">
+
+### Lighthouse
+
+The lighthouse tool in chrome developer tools was used to check for:
+ * performance
+ * accessibility
+ * best practices
+ * seo
+
+ lighthouse desktop:
+ <img src="assets/docs/Lighthouse-desktop-heroPage.JPG">
+
+ <img src="assets/docs/Lighthouse-desktop-gamePage.JPG">
+
+ lighthouse mobile:
+
+ <img src="assets/docs/Lighthouse-mobile-heroPage.JPG">
+
+ <img src="assets/docs/Lighthouse-mobile-gamePage.JPG">
+
+ ## Bugs
+
+ On initial testing of the JavaScript with JSHint, the for loops were flagged as vulnerable to inheritance from other objects. This was resolved by adding an 'If' conditional of .hasOwnProperty.
+ Subsequent testing with JSHint showed the error warning removed.
+
+ for loop issue before:
+ <img src="assets/docs/For loop issue-before.JPG">
+
+ for loop issue resolved:
+ <img src="assets/docs/For loop issue-After.JPG">
+
+ ## Technologies Used
+
+ All code was written using: [Visual Studio Code](https://code.visualstudio.com/)
+
+Version Control: [Git](https://git-scm.com/)
+
+Repository and Deployment: [Github](https://github.com/)
+
+Image Editing: [Faststone](https://www.faststone.org/)
+
+Image Conversion: [FormatFactory](http://www.oldversion.com/windows/format-factory/)
+
+## Deployment
+
+To deploy the github repository to gitpages:
+
+1. Open your repository in Github and click on settings (top-right)
+
+<img src="assets/docs/deploy1.JPG">
+
+1. Select Pages from the left-hand bar 
+
+<img src="assets/docs/Deploy2.JPG">
+
+1. Select Deploy from branch, main, /root and click save
+
+<img src="assets/docs/deploy3.JPG">
+
+1. Wait a moment, when the site is deployed, you can see the URL
+
+<img src="assets/docs/Deploy4.JPG">
 
 
 ## Credits
+
+A huge thanks to [Kenny Yip](https://www.kennyyip.com/) for freely sharing the card images which were used in this project.
+
+Also for his JavaScript walk through tutorial upon which this project was based https://www.youtube.com/watch?v=bMYCWccL-3U
+
+My code institute mentor, Oluwafemi Medale, for his support and suggestions.
+
+[Freepik](https://www.freepik.com/) for providing the index and game page background images
+
