@@ -61,7 +61,7 @@ const shuffle = () => {
 };
 
 const dealerTurn = () => {
-    if (playerHand < 15 || hitMe){
+    if (playerHand < 15 || hitMe) {
         let rules = document.getElementById("win-lose");
         rules.textContent = "You must play first!"
         rules.style.fontSize = "2rem";
@@ -97,7 +97,7 @@ const playerStart = () => {
         document.getElementById("player-cards").append(dealtCard);
     }
     let showPlayerScore = document.getElementById("player-play");
-    showPlayerScore.textContent = `Player: ${playerHand}`;
+    showPlayerScore.textContent = `Draw: ${playerHand}`;
     document.getElementById("player-play").addEventListener("click", deal);
     document.getElementById("stay").addEventListener("click", stay);
 };
@@ -154,7 +154,7 @@ const deal = () => {
         hitMe = false;
     }
     let showPlayerScore = document.getElementById("player-play");
-    showPlayerScore.textContent = `Player: ${playerHand}`;
+    showPlayerScore.textContent = `Draw: ${playerHand}`;
 };
 const stay = () => {
     if (playerHand < 15) {
