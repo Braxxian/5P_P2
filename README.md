@@ -125,6 +125,7 @@ tracking method, displaying the win - lose count on a scoreboard.
 | Player tries to stay while under 15 |  Action fails & player is reminded of the rules | Pass |
 | Player tries to initiate dealers turn before finishing their own |    Action fails and player is prompted to finish their turn first   |   Pass |
 | Player tries to draw a card after choosing to stay | Action fails and player is reminded they chose to stay |    Pass |
+| Player tries to draw more cards after they have gone 'Bust' | Action fails and they are reminded that they are 'bust'| pass |
 
 
 ## HTML Validation
